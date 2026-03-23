@@ -24,10 +24,8 @@
   <div class="container">
     <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:3rem" id="filters">
       <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="web">Web Dev</button>
-      <button class="filter-btn" data-filter="network">Network</button>
-      <button class="filter-btn" data-filter="systems">Digital Systems</button>
-      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="web">Live Sites &amp; Web</button>
+      <button class="filter-btn" data-filter="systems">Systems &amp; Platforms</button>
     </div>
 
     <style>
@@ -48,112 +46,161 @@
       .filter-btn.active { background: var(--accent); color: var(--navy); border-color: var(--accent); }
       .portfolio-item { transition: opacity .3s, transform .3s; }
       .portfolio-item.hidden { opacity: 0; pointer-events: none; transform: scale(.96); display: none; }
+      @media (max-width: 700px) {
+        .portfolio-item[style*="grid-column"] { grid-column: 1 !important; display: block !important; }
+        .portfolio-item[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+        .portfolio-item[style*="grid-template-columns"] .portfolio-card__thumb { min-height: 180px !important; height: 180px !important; }
+      }
     </style>
 
     <!-- ══ PORTFOLIO ITEMS ══ -->
     <div class="portfolio-grid" id="portfolio-grid">
 
-      <div class="portfolio-card reveal portfolio-item" data-cat="web">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2744,#0f3460)">🛒</div>
+      <!-- NEXORA — FLAGSHIP, full-width featured card -->
+      <div class="portfolio-card reveal portfolio-item" data-cat="systems" style="grid-column: 1 / -1; display:grid; grid-template-columns: 1fr 1.4fr; border-color:rgba(0,240,160,.3); box-shadow: 0 0 40px rgba(0,240,160,.07);">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#020f0a,#021a12,#051f15);height:100%;min-height:240px;font-size:4rem;flex-direction:column;gap:.8rem;position:relative;">
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,240,160,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,160,.05) 1px,transparent 1px);background-size:28px 28px;"></div>
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.6rem">
+            <span>🧩</span>
+            <span style="font-family:'Share Tech Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.15em">FLAGSHIP PRODUCT</span>
+          </div>
+        </div>
+        <div class="portfolio-card__body" style="padding:2.2rem">
+          <div class="portfolio-card__tags">
+            <span class="tag">SaaS Platform</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">HR Tech</span>
+            <span class="tag">Private Client</span>
+          </div>
+          <h3 style="font-size:1.5rem;margin-bottom:.6rem">Nexora — HR Core Workforce Platform</h3>
+          <p style="margin-bottom:1.2rem">An all-in-one HR management system built for companies that need complete control of their workforce. Nexora centralises payroll, attendance, shift rostering, work permit &amp; visa tracking, and role-based access control into a single unified platform.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.4rem">
+            <div>
+              <div style="font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.1em;margin-bottom:.3rem">MODULES</div>
+              <div style="font-size:.88rem;color:var(--gray-lt)">Payroll · Attendance · Roster · Permits · RBAC</div>
+            </div>
+            <div>
+              <div style="font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.1em;margin-bottom:.3rem">STACK</div>
+              <div style="font-size:.88rem;color:var(--gray-lt)">Laravel · MySQL · Docker · Blade</div>
+            </div>
+          </div>
+          <a href="https://github.com/pyjoek/nexora" target="_blank" class="btn btn--primary" style="font-size:.8rem;padding:.6rem 1.2rem">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Markshek Africa — LIVE CLIENT SITE -->
+      <div class="portfolio-card reveal portfolio-item" data-cat="web" style="border-color:rgba(0,170,255,.25)">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#020810,#041228,#050d20);position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,170,255,.15) 0%,transparent 70%);"></div>
+          <span style="position:relative;z-index:1;font-size:3.5rem">🏝️</span>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,240,160,.15);border:1px solid rgba(0,240,160,.4);border-radius:3px;padding:.2rem .6rem;font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em">LIVE</div>
+        </div>
         <div class="portfolio-card__body">
           <div class="portfolio-card__tags">
             <span class="tag">Web Dev</span>
-            <span class="tag">React</span>
-            <span class="tag">Django</span>
+            <span class="tag">Real Estate</span>
+            <span class="tag">Investment</span>
           </div>
-          <h3>E-Commerce Platform</h3>
-          <p>A full-featured online marketplace with inventory management, mobile money payment integration, and order tracking for a Tanzanian retail business.</p>
+          <h3>Markshek Africa</h3>
+          <p>A premium real estate investment platform for Zanzibar luxury land & estates. Built for international investors across Europe, USA & the Middle East — featuring property listings with ROI projections, WhatsApp lead capture, multilingual support, and a consultation booking system. 150+ properties sold, $48M+ in deals closed.</p>
+          <div style="margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+            <a href="https://markshekafrica.com" target="_blank" class="btn btn--primary" style="font-size:.78rem;padding:.5rem 1rem">Visit Live Site →</a>
+            <span style="font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--gray)">markshekafrica.com</span>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-card reveal portfolio-item" data-cat="network">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#102030,#0f3460)">📡</div>
+      <!-- Chagua Adventure — LIVE CLIENT SITE -->
+      <div class="portfolio-card reveal portfolio-item" data-cat="web" style="border-color:rgba(0,170,255,.25)">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#050f05,#081808,#041204);position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,240,160,.12) 0%,transparent 70%);"></div>
+          <span style="position:relative;z-index:1;font-size:3.5rem">🦁</span>
+          <div style="position:absolute;bottom:.8rem;right:.8rem;background:rgba(0,240,160,.15);border:1px solid rgba(0,240,160,.4);border-radius:3px;padding:.2rem .6rem;font-family:'Share Tech Mono',monospace;font-size:.65rem;color:var(--accent);letter-spacing:.1em">LIVE</div>
+        </div>
         <div class="portfolio-card__body">
           <div class="portfolio-card__tags">
-            <span class="tag">Network</span>
-            <span class="tag">MikroTik</span>
-            <span class="tag">Cisco</span>
+            <span class="tag">Web Dev</span>
+            <span class="tag">Tourism</span>
+            <span class="tag">Booking System</span>
           </div>
-          <h3>Enterprise Network Rollout</h3>
-          <p>Designed and deployed a secure multi-floor office network for a Zanzibar-based hotel group, including Wi-Fi, CCTV integration, and centralised management.</p>
+          <h3>Chagua Adventure Tours</h3>
+          <p>A full-featured tourism website for a licensed Zanzibar & Tanzania safari operator. Includes 30+ tour packages, an online booking system with destination selector, multilingual support (7 languages via Google Translate), hotel reservations, and WhatsApp integration for direct client communication.</p>
+          <div style="margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+            <a href="https://chaguaadventure.com" target="_blank" class="btn btn--primary" style="font-size:.78rem;padding:.5rem 1rem">Visit Live Site →</a>
+            <span style="font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--gray)">chaguaadventure.com</span>
+          </div>
         </div>
       </div>
 
+      <!-- Camera Monitor -->
       <div class="portfolio-card reveal portfolio-item" data-cat="systems">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a3020,#0f4030)">📊</div>
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#020d18,#041830,#061025)">📷</div>
         <div class="portfolio-card__body">
           <div class="portfolio-card__tags">
-            <span class="tag">Digital Systems</span>
+            <span class="tag">Systems</span>
             <span class="tag">Python</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">React</span>
+            <span class="tag">Flutter</span>
           </div>
-          <h3>School Management System</h3>
-          <p>A comprehensive MIS for a primary school — covering student records, attendance, fee tracking, report generation, and parent communication.</p>
+          <h3>Camera Monitor System</h3>
+          <p>A real-time camera monitoring system with a Python/Flask backend, React web dashboard, and Flutter mobile app — all sharing a single API. Pings cameras and streams live status to both frontends. Dockerised for easy deployment.</p>
+          <div style="margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center">
+            <a href="https://github.com/pyjoek/camera-monitor" target="_blank" class="btn btn--outline" style="font-size:.78rem;padding:.5rem 1rem">GitHub →</a>
+            <span style="font-size:.78rem;color:var(--gray);font-family:'Share Tech Mono',monospace">76 commits</span>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-card reveal portfolio-item" data-cat="web">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2030,#283060)">🏥</div>
-        <div class="portfolio-card__body">
-          <div class="portfolio-card__tags">
-            <span class="tag">Web Dev</span>
-            <span class="tag">Vue.js</span>
-            <span class="tag">FastAPI</span>
-          </div>
-          <h3>Clinic Booking Portal</h3>
-          <p>An appointment scheduling system for a medical clinic — patients book online, staff manage schedules, and automated SMS reminders reduce no-shows.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal portfolio-item" data-cat="design">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#2a1a10,#503020)">🎨</div>
-        <div class="portfolio-card__body">
-          <div class="portfolio-card__tags">
-            <span class="tag">Design</span>
-            <span class="tag">Brand Identity</span>
-            <span class="tag">Figma</span>
-          </div>
-          <h3>Brand Identity Package</h3>
-          <p>Complete visual identity for a Dar es Salaam logistics startup — logo, colour system, typography, stationery, and social media templates.</p>
-        </div>
-      </div>
-
+      <!-- Python Projects -->
       <div class="portfolio-card reveal portfolio-item" data-cat="systems">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a1030,#300f60)">🔄</div>
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#0a1505,#122008,#0d1a06)">🐍</div>
         <div class="portfolio-card__body">
           <div class="portfolio-card__tags">
-            <span class="tag">Digital Systems</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Automation</span>
-          </div>
-          <h3>Automated Reporting System</h3>
-          <p>Replaced manual Excel-based reporting for an NGO with an automated pipeline that pulls live data and generates weekly PDF reports for management.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal portfolio-item" data-cat="network">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#102020,#0f4040)">🔒</div>
-        <div class="portfolio-card__body">
-          <div class="portfolio-card__tags">
-            <span class="tag">Network</span>
+            <span class="tag">Python</span>
+            <span class="tag">Networking</span>
             <span class="tag">Security</span>
-            <span class="tag">VPN</span>
+            <span class="tag">GUI</span>
           </div>
-          <h3>Secure Remote Access Setup</h3>
-          <p>Implemented a site-to-site VPN solution enabling secure remote work for a distributed team across three locations in Tanzania.</p>
+          <h3>Python Projects Collection</h3>
+          <p>A diverse collection of Python projects spanning network automation, cybersecurity scripts, desktop GUI apps, game development, and data tools. Demonstrates strong Python fundamentals across real-world use cases.</p>
+          <div style="margin-top:1.2rem">
+            <a href="https://github.com/pyjoek/Python-projects" target="_blank" class="btn btn--outline" style="font-size:.78rem;padding:.5rem 1rem">GitHub →</a>
+          </div>
         </div>
       </div>
 
+      <!-- Alexa AI -->
       <div class="portfolio-card reveal portfolio-item" data-cat="web">
-        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2530,#204050)">🌍</div>
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#050518,#0a0a2e,#05051a)">🤖</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Voice</span>
+          </div>
+          <h3>Alexa-Style Voice AI</h3>
+          <p>A Python-based voice assistant that listens, interprets, and responds to voice commands. Built as an AI research project exploring speech recognition, natural language processing, and task automation in Python.</p>
+          <div style="margin-top:1.2rem">
+            <a href="https://github.com/pyjoek/alexa_python" target="_blank" class="btn btn--outline" style="font-size:.78rem;padding:.5rem 1rem">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Todo / Laravel -->
+      <div class="portfolio-card reveal portfolio-item" data-cat="web">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#180505,#300a0a,#1a0505)">⚡</div>
         <div class="portfolio-card__body">
           <div class="portfolio-card__tags">
             <span class="tag">Web Dev</span>
-            <span class="tag">WordPress</span>
-            <span class="tag">SEO</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Docker</span>
           </div>
-          <h3>Tourism Company Website</h3>
-          <p>A performance-optimised website for a Zanzibar safari and tours operator, with multilingual support, booking forms, and integrated Google Analytics.</p>
+          <h3>Laravel Task Manager</h3>
+          <p>A full-stack task management app built with Laravel demonstrating pivot table relationships, Eloquent ORM, Dockerised deployment, and Vite-powered frontend tooling. Clean MVC architecture throughout.</p>
+          <div style="margin-top:1.2rem">
+            <a href="https://github.com/pyjoek/Todo" target="_blank" class="btn btn--outline" style="font-size:.78rem;padding:.5rem 1rem">GitHub →</a>
+          </div>
         </div>
       </div>
 
@@ -165,12 +212,12 @@
 <section class="section section--alt" style="margin-top:60px">
   <div class="container" style="text-align:center">
     <div class="reveal">
-      <div class="eyebrow">Open Source</div>
+      <div class="eyebrow">// Open Source</div>
       <div class="gold-rule"></div>
-      <h2>See More on GitHub</h2>
-      <p style="margin:1rem auto 2.4rem">Explore code, experiments, and open-source contributions from the JIA team.</p>
+      <h2>64 Repositories on GitHub</h2>
+      <p style="margin:1rem auto 2.4rem">Explore the full range of projects, experiments, and open-source work — from network automation scripts to full-stack platforms.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="https://github.com/pyjoek" target="_blank" class="btn btn--primary">⌥ View GitHub Profile →</a>
+        <a href="https://github.com/pyjoek" target="_blank" class="btn btn--primary">⌥ github.com/pyjoek →</a>
         <a href="contact.html" class="btn btn--outline">Discuss a Project</a>
       </div>
     </div>
