@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Joel in Action (JIA)</title>
+  <meta name="description" content="Get in touch with Joel in Action. We're based in Zanzibar, Tanzania and work with clients across East Africa and beyond." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Contact Us</h1>
+    <p>Tell us about your project or challenge. We'll be back in touch within 24 hours with thoughts and next steps.</p>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start">
+
+      <!-- Contact info -->
+      <div class="reveal">
+        <div class="eyebrow">Reach Us</div>
+        <div class="gold-rule"></div>
+        <h2>Let's Talk</h2>
+        <p style="margin-bottom:2.4rem">Whether you have a clear brief or just an idea, we'd love to hear from you. No obligation, just a conversation.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1.5rem">
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="width:44px;height:44px;border-radius:8px;background:rgba(0,240,160,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📧</div>
+            <div>
+              <div style="font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem">Email</div>
+              <a href="mailto:info@joelinaction.tech" style="color:var(--gray-lt);font-size:.97rem;transition:color .22s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--gray-lt)'">info@joelinaction.tech</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="width:44px;height:44px;border-radius:8px;background:rgba(0,240,160,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📱</div>
+            <div>
+              <div style="font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem">Phone / WhatsApp</div>
+              <a href="tel:+255773013475" style="color:var(--gray-lt);font-size:.97rem;transition:color .22s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--gray-lt)'">+255 773 013 475</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="width:44px;height:44px;border-radius:8px;background:rgba(0,240,160,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📍</div>
+            <div>
+              <div style="font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem">Location</div>
+              <p style="color:var(--gray-lt);font-size:.97rem;max-width:99ch">Zanzibar, Tanzania<br>Available remotely across East Africa</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem">
+            <div style="width:44px;height:44px;border-radius:8px;background:rgba(0,240,160,.12);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">⌥</div>
+            <div>
+              <div style="font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem">GitHub</div>
+              <a href="https://github.com/pyjoek" target="_blank" style="color:var(--gray-lt);font-size:.97rem;transition:color .22s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--gray-lt)'">github.com/pyjoek</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem;padding:1.5rem;background:var(--navy-lt);border:1px solid var(--border);border-radius:10px">
+          <div style="font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:.5rem">Response Time</div>
+          <p style="font-size:.9rem">We typically respond to all enquiries within <strong style="color:var(--white)">24 hours</strong> on business days.</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal">
+        <div style="background:var(--navy-lt);border:1px solid var(--border);border-radius:12px;padding:2.8rem">
+          <h3 style="margin-bottom:1.8rem">Send Us a Message</h3>
+          <form class="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="company">Company / Organisation</label>
+              <input type="text" id="company" placeholder="Optional" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service">
+                <option value="">— Select a service —</option>
+                <option>Software Development</option>
+                <option>Network Setup &amp; Management</option>
+                <option>Systems Administration</option>
+                <option>Digital Systems</option>
+                <option>Graphics Design</option>
+                <option>ICT Security</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project *</label>
+              <textarea id="message" placeholder="Describe your project, challenge, or question..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Common Questions</div>
+      <div class="gold-rule"></div>
+      <h2>FAQs</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem" class="reveal">
+      <div style="background:var(--navy);border:1px solid var(--border);border-radius:10px;padding:1.8rem">
+        <h4 style="font-family:'Space Grotesk',sans-serif;margin-bottom:.6rem">How quickly can you start a project?</h4>
+        <p style="font-size:.9rem">We usually begin within 1–2 weeks of agreeing scope and terms. Urgent projects can often be accommodated sooner.</p>
+      </div>
+      <div style="background:var(--navy);border:1px solid var(--border);border-radius:10px;padding:1.8rem">
+        <h4 style="font-family:'Space Grotesk',sans-serif;margin-bottom:.6rem">Do you work with clients outside Tanzania?</h4>
+        <p style="font-size:.9rem">Yes — we work remotely with clients across East Africa and internationally. Most of our communication is online.</p>
+      </div>
+      <div style="background:var(--navy);border:1px solid var(--border);border-radius:10px;padding:1.8rem">
+        <h4 style="font-family:'Space Grotesk',sans-serif;margin-bottom:.6rem">What information do I need to get a quote?</h4>
+        <p style="font-size:.9rem">Just a rough description of what you need is enough to start. We'll ask follow-up questions to refine the scope before quoting.</p>
+      </div>
+      <div style="background:var(--navy);border:1px solid var(--border);border-radius:10px;padding:1.8rem">
+        <h4 style="font-family:'Space Grotesk',sans-serif;margin-bottom:.6rem">Do you offer post-launch support?</h4>
+        <p style="font-size:.9rem">Absolutely. We offer retainer and ad-hoc support packages to keep your systems healthy after deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
