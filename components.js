@@ -4,7 +4,7 @@ const NAV_HTML = `
 <nav class="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <img src="logo.png" alt="Joel in Action (JIA)" style="height:38px;width:auto;display:block;" />
+      <img src="logo.png" alt="Joel in Action (JIA)" style="height:80px;width:auto;display:block;" />
     </a>
     <ul class="nav__links">
       <li><a href="index.html">Home</a></li>
@@ -35,8 +35,8 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" style="display:inline-block;margin-bottom:.8rem">
-          <img src="logo.png" alt="Joel in Action (JIA)" style="height:42px;width:auto;filter:brightness(0) invert(1) opacity(0.85);" />
+        <a href="index.html" style="display:inline-block;margin-bottom:.3rem">
+          <img src="logo.png" alt="Joel in Action (JIA)" style="height:90px;width:auto;filter:brightness(0) invert(1) opacity(0.85);" />
         </a>
         <p>Transforming ideas into actionable ICT solutions for businesses and communities across East Africa and beyond.</p>
       </div>
