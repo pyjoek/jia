@@ -63,22 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.6 });
   counters.forEach(el => cObserver.observe(el));
 
-  /* ── Contact form ── */
-  const form = document.querySelector('.contact-form');
-  form?.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent ✓';
-    btn.disabled = true;
-    btn.style.background = '#2a7a4e';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      btn.style.background = '';
-      btn.style.color = '';
-      form.reset();
-    }, 3500);
-  });
-
 });
