@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Joel in Action (JIA)</title>
+  <meta name="description" content="Browse Joel in Action's portfolio of software development, network, and digital systems projects." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Our Work</div>
+    <h1>Portfolio</h1>
+    <p>A selection of projects that showcase our range, depth, and commitment to quality delivery.</p>
+  </div>
+</section>
+
+<!-- ══ FILTER ══════════════════════════════════════════════ -->
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:3rem" id="filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="network">Network</button>
+      <button class="filter-btn" data-filter="systems">Digital Systems</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <style>
+      .filter-btn {
+        padding: .5rem 1.2rem;
+        border-radius: 4px;
+        border: 1.5px solid var(--border);
+        background: transparent;
+        color: var(--gray-lt);
+        font-family: 'DM Sans', sans-serif;
+        font-size: .85rem;
+        font-weight: 600;
+        letter-spacing: .04em;
+        cursor: pointer;
+        transition: all .22s ease;
+      }
+      .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+      .filter-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+      .portfolio-item { transition: opacity .3s, transform .3s; }
+      .portfolio-item.hidden { opacity: 0; pointer-events: none; transform: scale(.96); display: none; }
+    </style>
+
+    <!-- ══ PORTFOLIO ITEMS ══ -->
+    <div class="portfolio-grid" id="portfolio-grid">
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="web">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2744,#0f3460)">🛒</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">React</span>
+            <span class="tag">Django</span>
+          </div>
+          <h3>E-Commerce Platform</h3>
+          <p>A full-featured online marketplace with inventory management, mobile money payment integration, and order tracking for a Tanzanian retail business.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="network">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#102030,#0f3460)">📡</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Network</span>
+            <span class="tag">MikroTik</span>
+            <span class="tag">Cisco</span>
+          </div>
+          <h3>Enterprise Network Rollout</h3>
+          <p>Designed and deployed a secure multi-floor office network for a Zanzibar-based hotel group, including Wi-Fi, CCTV integration, and centralised management.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="systems">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a3020,#0f4030)">📊</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Digital Systems</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <h3>School Management System</h3>
+          <p>A comprehensive MIS for a primary school — covering student records, attendance, fee tracking, report generation, and parent communication.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="web">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2030,#283060)">🏥</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">FastAPI</span>
+          </div>
+          <h3>Clinic Booking Portal</h3>
+          <p>An appointment scheduling system for a medical clinic — patients book online, staff manage schedules, and automated SMS reminders reduce no-shows.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="design">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#2a1a10,#503020)">🎨</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Design</span>
+            <span class="tag">Brand Identity</span>
+            <span class="tag">Figma</span>
+          </div>
+          <h3>Brand Identity Package</h3>
+          <p>Complete visual identity for a Dar es Salaam logistics startup — logo, colour system, typography, stationery, and social media templates.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="systems">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a1030,#300f60)">🔄</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Digital Systems</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Automation</span>
+          </div>
+          <h3>Automated Reporting System</h3>
+          <p>Replaced manual Excel-based reporting for an NGO with an automated pipeline that pulls live data and generates weekly PDF reports for management.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="network">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#102020,#0f4040)">🔒</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Network</span>
+            <span class="tag">Security</span>
+            <span class="tag">VPN</span>
+          </div>
+          <h3>Secure Remote Access Setup</h3>
+          <p>Implemented a site-to-site VPN solution enabling secure remote work for a distributed team across three locations in Tanzania.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal portfolio-item" data-cat="web">
+        <div class="portfolio-card__thumb" style="background:linear-gradient(135deg,#1a2530,#204050)">🌍</div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">SEO</span>
+          </div>
+          <h3>Tourism Company Website</h3>
+          <p>A performance-optimised website for a Zanzibar safari and tours operator, with multilingual support, booking forms, and integrated Google Analytics.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ GITHUB CTA ══════════════════════════════════════════ -->
+<section class="section section--alt" style="margin-top:60px">
+  <div class="container" style="text-align:center">
+    <div class="reveal">
+      <div class="eyebrow">Open Source</div>
+      <div class="gold-rule"></div>
+      <h2>See More on GitHub</h2>
+      <p style="margin:1rem auto 2.4rem">Explore code, experiments, and open-source contributions from the JIA team.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://github.com/pyjoek" target="_blank" class="btn btn--primary">⌥ View GitHub Profile →</a>
+        <a href="contact.html" class="btn btn--outline">Discuss a Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="main.js"></script>
+<script>
+  // Portfolio filter
+  document.addEventListener('DOMContentLoaded', () => {
+    const btns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.portfolio-item');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          const match = filter === 'all' || item.dataset.cat === filter;
+          item.classList.toggle('hidden', !match);
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>
